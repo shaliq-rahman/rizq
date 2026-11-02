@@ -11,3 +11,7 @@ next-env.d.ts
 # NEVER commit the Firebase Admin SDK / service-account key:
 *firebase-adminsdk*.json
 *service-account*.json
+
+# local copies of env values
+serverenv
+*.env
