@@ -624,3 +624,18 @@ body,button,input,textarea,select{font-family:var(--font)}
   .nav>div{max-width:560px;padding:4px;border-radius:20px}
   .wrap{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
 }
+
+/* ---------- Keyboard open: bottom bar tucks away, header stops sticking (fixes iOS shifting) ---------- */
+html{background:var(--bg)}
+.kb .nav{opacity:0;transform:translateY(140%)!important;pointer-events:none;transition:transform .2s ease,opacity .15s ease}
+.kb .top{position:relative!important;backdrop-filter:none;-webkit-backdrop-filter:none}
+.nav{transition:transform .25s ease,opacity .2s ease}
+.kb .wrap{padding-bottom:24px}
+
+/* ---------- Floating nav: sits lower, small gap under it (iPhone home-bar overlap is fine) ---------- */
+.nav{bottom:max(8px,calc(env(safe-area-inset-bottom) - 20px))}
+.wrap{padding-bottom:calc(86px + max(0px,calc(env(safe-area-inset-bottom) - 20px)))}
+@media (orientation:landscape) and (max-height:520px){
+  .nav{bottom:max(4px,calc(env(safe-area-inset-bottom) - 20px))}
+  .wrap{padding-bottom:calc(62px + max(0px,calc(env(safe-area-inset-bottom) - 20px)))}
+}
