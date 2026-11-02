@@ -7,12 +7,15 @@ export const metadata: Metadata = {
   description: 'Pay off debt, step by step.',
   manifest: '/manifest.webmanifest',
   icons: { icon: '/icon-192.png', apple: '/icon-192.png' },
+  formatDetection: { telephone: false, address: false, email: false },
+  appleWebApp: { capable: true, title: 'Rizq', statusBarStyle: 'default' },
 };
 
 export const viewport: Viewport = {
   themeColor: '#0F2A1D',
   width: 'device-width',
   initialScale: 1,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

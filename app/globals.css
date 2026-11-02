@@ -1,12 +1,12 @@
 :root{--bg:#F4F6F1;--card:#fff;--ink:#14231B;--mute:#66736B;--line:#E2E7DF;--violet:#1E7A4C;--violet2:#E3F2E8;--mint:#1E7A4C;--mint2:#E3F2E8;--coral:#C8443A;--coral2:#FCE9E7;--amber:#F5A524;--amber2:#FFF3DA;--sky:#2B8FC4;--night:#0F2A1D;--lime:#C9F06B}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
 body{background:radial-gradient(800px 420px at 100% -10%,#E6F3C9 0,transparent 60%),var(--bg);min-height:100vh}
 .wrap{max-width:780px;margin:0 auto;padding:14px 14px 100px}
 h1,h2,h3{margin:0}
 .num,.big,.disp{font-family:'Plus Jakarta Sans',sans-serif}
 .top{display:flex;align-items:center;justify-content:space-between;margin:2px 2px 14px}
-.brand{font-family:'Plus Jakarta Sans';font-weight:800;font-size:19px;letter-spacing:-.4px;display:flex;align-items:center;gap:8px}
+.brand{font-family:var(--font);font-weight:800;font-size:19px;letter-spacing:-.4px;display:flex;align-items:center;gap:8px}
 .logo{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,#1E7A4C,#C9F06B);display:grid;place-items:center;color:#fff;font-size:15px;box-shadow:0 6px 16px rgba(108,76,241,.35)}
 .saved{font-size:12px;color:var(--mute);background:#fff;border:1px solid var(--line);padding:5px 10px;border-radius:20px}
 .hero{background:linear-gradient(140deg,#0F2A1D 0%,#123824 60%,#0F2A1D 100%);color:#fff;border-radius:26px;padding:22px 20px 18px;position:relative;overflow:hidden;box-shadow:0 18px 40px -16px rgba(15,42,29,.55)}
@@ -19,18 +19,18 @@ h1,h2,h3{margin:0}
 .sub{color:#BFD0C5;font-size:13.5px;line-height:1.45}
 .ring{position:relative;width:104px;height:104px}
 .ring svg{transform:rotate(-90deg)}
-.ring .c{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:'Plus Jakarta Sans';font-weight:800;font-size:22px;line-height:1}
-.ring .c small{display:block;font-family:'Plus Jakarta Sans';font-size:10.5px;font-weight:600;color:#BFD0C5;margin-top:3px}
+.ring .c{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--font);font-weight:800;font-size:22px;line-height:1}
+.ring .c small{display:block;font-family:var(--font);font-size:10.5px;font-weight:600;color:#BFD0C5;margin-top:3px}
 .count{display:flex;gap:8px;margin-top:14px}
 .count div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:9px 6px;flex:1;text-align:center}
-.count b{font-family:'Plus Jakarta Sans';font-size:21px;display:block}
+.count b{font-family:var(--font);font-size:21px;display:block}
 .count small{font-size:10.5px;color:#BFD0C5;text-transform:uppercase;letter-spacing:.8px}
 .pills{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 12px}
 .pill small{color:#BFD0C5;font-size:11.5px}
 .pill b{display:block;font-size:15.5px;margin-top:2px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;margin-top:12px;box-shadow:0 6px 20px -14px rgba(15,42,29,.2)}
-.card h3{font-family:'Plus Jakarta Sans';font-size:15.5px;display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.card h3{font-family:var(--font);font-size:15.5px;display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
 .muted{color:var(--mute);font-size:13px;line-height:1.45}
 .chip{font-size:11px;font-weight:700;padding:3px 8px;border-radius:8px;white-space:nowrap}
 .c-target{background:var(--amber2);color:#9A6200}.c-min{background:var(--violet2);color:var(--violet)}.c-close{background:var(--mint2);color:#1E7A4C}.c-emi{background:#EEF1EC;color:var(--mute)}.c-pre{background:#E6F6FE;color:#0B7FB0}.c-last{background:var(--coral2);color:#C42A47}
@@ -45,7 +45,7 @@ h1,h2,h3{margin:0}
 .step .tx{flex:1;min-width:0}
 .step .tt{font-weight:650;font-size:14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .step .ds{font-size:12.3px;color:var(--mute);margin-top:2px;line-height:1.4}
-.step .am{font-family:'Plus Jakarta Sans';font-weight:700;font-size:14.5px;white-space:nowrap;margin-top:1px}
+.step .am{font-family:var(--font);font-weight:700;font-size:14.5px;white-space:nowrap;margin-top:1px}
 .step.info{cursor:default}
 .step.info .bx{border-style:dashed}
 .when{font-size:11px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.9px;margin:12px 10px 2px}
@@ -65,7 +65,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .donut svg path{cursor:pointer;transition:opacity .2s,transform .2s;transform-origin:75px 75px}
 .donut svg path.dim{opacity:.25}
 .donut svg path.hot{transform:scale(1.05)}
-.dc{font-family:'Plus Jakarta Sans';font-weight:800}
+.dc{font-family:var(--font);font-weight:800}
 .leg{display:flex;flex-direction:column;gap:3px;max-height:220px;overflow:auto}
 .leg div{display:flex;align-items:center;gap:8px;font-size:12.8px;padding:4px 6px;border-radius:8px;cursor:pointer}
 .leg div.hot{background:var(--violet2)}
@@ -94,10 +94,10 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .month>summary{list-style:none;cursor:pointer;padding:13px 14px 12px}
 .month>summary::-webkit-details-marker{display:none}
 .mh{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.mt{font-family:'Plus Jakarta Sans';font-weight:700;font-size:15px}
-.mt small{display:block;font-family:'Plus Jakarta Sans';color:var(--mute);font-weight:500;font-size:12px;margin-top:2px}
-.ma{text-align:right;font-family:'Plus Jakarta Sans';font-weight:800;font-size:15.5px}
-.ma small{display:block;font-family:'Plus Jakarta Sans';color:var(--mute);font-weight:500;font-size:11.5px}
+.mt{font-family:var(--font);font-weight:700;font-size:15px}
+.mt small{display:block;font-family:var(--font);color:var(--mute);font-weight:500;font-size:12px;margin-top:2px}
+.ma{text-align:right;font-family:var(--font);font-weight:800;font-size:15.5px}
+.ma small{display:block;font-family:var(--font);color:var(--mute);font-weight:500;font-size:11.5px}
 .mring{width:38px;height:38px;flex:none;position:relative}
 .mring svg{transform:rotate(-90deg)}
 .mring span{position:absolute;inset:0;display:grid;place-items:center;font-size:10px;font-weight:800;color:var(--violet)}
@@ -109,11 +109,11 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .chart{position:relative;margin-top:8px;touch-action:pan-y}
 .chart svg{display:block;width:100%;height:auto}
 .tip{position:absolute;top:0;background:var(--night);color:#fff;border-radius:12px;padding:8px 10px;font-size:12px;pointer-events:none;white-space:nowrap;transform:translateX(-50%);box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.tip b{font-family:'Plus Jakarta Sans'}
+.tip b{font-family:var(--font)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
 .stat{background:var(--bg);border-radius:14px;padding:10px}
 .stat small{color:var(--mute);font-size:11.3px;display:block}
-.stat b{font-family:'Plus Jakarta Sans';font-size:15.5px}
+.stat b{font-family:var(--font);font-size:15.5px}
 .note{background:var(--amber2);border-radius:14px;padding:10px 12px;font-size:12.8px;margin-top:10px;color:#7A4E00;line-height:1.45}
 .warn{background:var(--coral2);color:#C42A47;border-radius:14px;padding:10px 12px;font-size:13px;margin-top:10px;font-weight:600}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
@@ -432,3 +432,181 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .authgo{height:52px;font-size:15.5px;margin-top:16px;border-radius:16px}
 .authgo:disabled{opacity:.65;cursor:default}
 .authfoot{text-align:center;color:var(--mute);font-size:12px;margin-top:14px;line-height:1.45}
+
+/* ---------- Installed web app / mobile: sticky header + docked bottom nav ---------- */
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none}
+body{min-height:100dvh;overscroll-behavior-y:none}
+
+/* top bar stays pinned while scrolling */
+.top{
+  position:sticky;top:0;z-index:40;
+  margin:0 -12px 8px;
+  padding:calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 10px calc(14px + env(safe-area-inset-left));
+  background:rgba(244,246,241,.88);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid transparent;
+}
+
+/* bottom nav: docked full-width bar, always at the screen bottom, safe-area aware */
+.nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  display:block;padding:0;
+  transform:translateZ(0);-webkit-transform:translateZ(0);
+}
+.nav>div{
+  max-width:none;width:100%;margin:0;border-radius:20px 20px 0 0;
+  padding:8px calc(10px + env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) calc(10px + env(safe-area-inset-left));
+  gap:4px;box-shadow:0 -10px 30px -12px rgba(15,42,29,.5);
+  background:rgba(15,42,29,.97);
+}
+.nav button{border-radius:14px}
+
+/* keep content clear of the docked bar */
+.wrap{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+@media(min-width:781px){.top{margin:0 0 8px}.nav>div{max-width:520px;margin:0 auto 12px;border-radius:22px;padding-bottom:8px}.nav{bottom:env(safe-area-inset-bottom)}}
+
+/* ---------- No auto-zoom on inputs (iOS zooms when text < 16px) + always mobile-shaped ---------- */
+.f input,.f input[type=text],.dg input,.dg label input[type=number],.act input,td input[type=text],td input[type=number],.dh input[type=text],.datebtn,.afield input,.amtbox input{font-size:16px!important}
+.amtbox input{font-size:28px!important}
+button,[data-tab],[data-step],.cat,.step{touch-action:manipulation}
+
+/* phone-width column on every screen */
+.wrap{max-width:430px}
+.nav>div{max-width:430px;margin-left:auto;margin-right:auto}
+.dpsheet{width:min(430px,100%)}
+@media(min-width:500px){
+  body{background:#E6EBE2}
+  .wrap{background:var(--bg);min-height:100dvh;box-shadow:0 0 70px -24px rgba(15,42,29,.4)}
+  .nav>div{margin-bottom:0;border-radius:20px 20px 0 0;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+  .top{margin:0 -12px 8px}
+}
+
+/* ---------- Notification popup: dimmed + blurred background, glass sheet ---------- */
+.nbk{position:fixed;inset:0;z-index:60;background:rgba(15,42,29,.30);-webkit-backdrop-filter:blur(7px) saturate(1.2);backdrop-filter:blur(7px) saturate(1.2);animation:nfade .25s ease both}
+@keyframes nfade{from{opacity:0}to{opacity:1}}
+.notif{position:fixed!important;z-index:61;right:auto!important;
+  top:calc(env(safe-area-inset-top) + 62px)!important;left:50%;transform:translateX(-50%);
+  width:min(406px,calc(100vw - 24px))!important;
+  background:rgba(255,255,255,.80)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(1.7);backdrop-filter:blur(22px) saturate(1.7);
+  border:1px solid rgba(255,255,255,.65)!important;border-radius:24px!important;
+  box-shadow:0 28px 60px -18px rgba(15,42,29,.55)!important;max-height:calc(100dvh - 160px);overflow:auto;
+  animation:npop .28s cubic-bezier(.2,.9,.25,1) both}
+@keyframes npop{from{opacity:0;transform:translateX(-50%) translateY(-10px) scale(.96)}to{opacity:1;transform:translateX(-50%) none}}
+.notif .ni.hot{background:rgba(255,244,220,.75)}
+.notif .nf{border-top-color:rgba(15,42,29,.12)}
+
+/* ---------- Native-app feel ---------- */
+html{scrollbar-width:none}
+::-webkit-scrollbar{display:none}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:default}
+input,textarea,[contenteditable]{-webkit-user-select:text;user-select:text;cursor:text}
+button,.step,.cat,.month>summary,.uchip,.bell{cursor:pointer}
+button:active:not(:disabled){transform:scale(.97)}
+.step:active{background:#EDF5EA}
+.cat:active,.nav button:active{transform:scale(.94)}
+.month>summary:active{background:#F4F8F1}
+button,.step,.cat,.nav button,.btn{transition:transform .12s ease,background .15s ease,box-shadow .15s ease}
+
+
+/* =====================  QA PASS  ===================== */
+:root{--font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,system-ui,sans-serif}
+body,button,input,textarea,select{font-family:var(--font)}
+
+/* animate only when changing tabs / logging in — never on every tick or keystroke */
+.wrap .fade{animation:none}
+.tabin .wrap .fade,.tabin .wrap .hero{animation:fade .32s ease both}
+
+/* plan month summary: stacked, compact, never clipped */
+.cf span{display:flex;flex-direction:column;gap:1px;padding:5px 8px;min-width:0;white-space:nowrap}
+.cf small{font-size:11px;color:var(--mute);font-weight:600}
+.cf b{font-size:12.5px;color:var(--ink)}
+.mt small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* long names wrap (max 2 lines) instead of running out of their box */
+.leg span{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden!important;text-overflow:clip!important;overflow-wrap:anywhere;line-height:1.25}
+.sp .tx b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:clip;overflow-wrap:anywhere;line-height:1.3}
+.step .tt{overflow-wrap:anywhere}
+.month .mt{overflow-wrap:anywhere}
+
+/* comfortable tap targets (≥ 36–40px) */
+.pbtn{width:40px;height:40px}
+.seg button{min-height:38px;padding:8px 11px}
+.card h3.one .seg button{min-height:36px;padding:6px 10px}
+.dpquick button{min-height:36px;padding:8px 16px}
+.x{min-width:40px;min-height:40px;display:grid;place-items:center}
+.dh .x{width:40px;height:40px}
+.sp .x{width:40px;height:40px;margin-right:-8px}
+.btn{min-height:46px}
+.tgrow{display:flex;align-items:center;gap:12px;margin-top:12px;min-height:44px;cursor:pointer}
+.tg #gst{width:100%;height:100%}
+.tg{flex:none}
+
+/* minimum readable text size 11px */
+.chip,.when,.ndot,.count small,.stat small,.ms small,.cfr.h,.jbar .mk span,.ring .c small{font-size:11px}
+.nav button{font-size:11px}
+.ma small{font-size:11.5px}
+.mring span{font-size:11px}
+.mring{width:40px;height:40px}.mring svg{width:40px;height:40px}
+.badge{font-size:11.5px}
+.ni small,.nf{font-size:12px}
+.mhint{display:block;font-size:11.5px;color:#55615A;margin:4px 3px 0;font-weight:600}
+
+/* contrast */
+.chip.c-emi{color:#55615A}
+.notif .ni small,.notif .nf,.notif .nf span{color:#55615A}
+.muted{color:#5B675F}
+
+/* login: never clipped at the top on short screens (centres safely, scrolls if needed) */
+.auth{align-items:flex-start;min-height:100dvh}
+.authbox{margin:auto}
+
+/* picker: wheel height driven by one variable (works in landscape too) */
+.dpwheels{--wh:200px;height:var(--wh)}
+.wh{height:var(--wh)}
+.wh .wsp{height:calc((var(--wh) - 40px)/2)}
+.dpband{top:calc((var(--wh) - 40px)/2)}
+.dpwheels.m2{grid-template-columns:1.5fr 1fr}
+.dpsheet{max-height:100dvh;overflow:auto}
+
+/* phone in LANDSCAPE: use the width, shrink the chrome (real app behaviour) */
+@media (orientation:landscape) and (max-height:520px){
+  .wrap{max-width:780px;padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right));padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  .top{padding-top:calc(4px + env(safe-area-inset-top));padding-bottom:4px;margin-bottom:4px}
+  .brand .bw{height:22px}
+  .bell{width:36px;height:36px}
+  .nav>div{max-width:780px;padding-top:4px;padding-bottom:calc(4px + env(safe-area-inset-bottom));border-radius:16px 16px 0 0}
+  .nav button{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;padding:7px 4px}
+  .nav button svg{margin:0;width:18px;height:18px}
+  .notif{max-height:calc(100dvh - 90px);top:calc(env(safe-area-inset-top) + 50px)!important}
+  .dpwheels{--wh:120px}
+  .hero{padding:12px 14px}
+  .authbox{padding:18px 20px}
+  .authlogo{height:34px;margin-bottom:8px}
+  .authbox h1{font-size:19px}.authsub{margin:4px 0 10px}
+}
+
+/* respect "reduce motion" */
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* round 2 */
+:root{--violet:#18683F}
+.mt small{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:clip;overflow-wrap:anywhere}
+.dh input[type=text],.dg input,.dg label input[type=number],.f input,.f input[type=text],.act input{min-height:42px}
+@media (orientation:landscape) and (max-height:520px){.nav button{padding:10px 4px}}
+.dg{align-items:start}
+
+/* round 3 */
+:root{--coral:#B3352B}
+.stat small{white-space:normal;line-height:1.2;overflow:visible;text-overflow:clip}
+.stat{display:flex;flex-direction:column;justify-content:space-between}
+
+/* heading icon tile: consistent gap before the title */
+.card h3>span:first-child{gap:9px;align-items:center}
+
+/* plan-start safeguard banner */
+.startwarn{background:#FFF4DC;border:1px solid #F3D9A0;border-radius:18px;padding:12px 14px;margin:2px 0 10px;color:#6B4700;font-size:13px;line-height:1.4}
+.startwarn .sw{display:flex;gap:10px;align-items:flex-start}
+.startwarn .ic{width:18px;height:18px;flex:none;margin-top:1px;vertical-align:0;color:#B7791F}
+.startwarn .btn{margin-top:10px;min-height:44px;background:linear-gradient(135deg,#B7791F,#D99A2B);box-shadow:none}
+.startwarn.soft{background:#EEF3F8;border-color:#D5E0EC;color:#34506B}.startwarn.soft .ic{color:#34506B}

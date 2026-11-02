@@ -20,7 +20,7 @@ export default function RizqApp() {
 
   return (
     <>
-      <div id="root" suppressHydrationWarning />
+      <div id="root" role="main" suppressHydrationWarning />
       <canvas id="confetti" />
     </>
   );
