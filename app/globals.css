@@ -119,7 +119,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 td,th{padding:5px 3px;text-align:left}
 th{font-size:11px;color:var(--mute);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-td input[type=text],td input[type=number],.f input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:9px 10px;font:inherit;font-size:14px;background:#FBFDF9;color:var(--ink)}
+td input[type=text],td input:is([type=number],[data-num]),.f input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:9px 10px;font:inherit;font-size:14px;background:#FBFDF9;color:var(--ink)}
 td input:focus,.f input:focus{outline:none;border-color:var(--violet);background:#fff;box-shadow:0 0 0 3px var(--violet2)}
 td .sw{width:10px;height:10px;border-radius:50%;display:inline-block}
 .x{border:0;background:none;color:var(--mute);font-size:18px;cursor:pointer;padding:4px}
@@ -212,7 +212,7 @@ td .sw{width:10px;height:10px;border-radius:50%;display:inline-block}
 .donut{margin-top:6px;gap:10px;grid-template-columns:136px 1fr}.donut svg{width:136px;height:136px}
 .ms{width:118px;padding:10px;border-radius:14px}.ms b{font-size:12.3px}.ms small{font-size:10.3px;margin-top:5px}.ms .e{width:30px;height:30px}.ms .e .ic{width:17px;height:17px}
 .f{gap:8px;margin-top:6px}.f label{font-size:11.3px}
-td input[type=text],td input[type=number],.f input{padding:7px 9px;font-size:13.3px;border-radius:10px}
+td input[type=text],td input:is([type=number],[data-num]),.f input{padding:7px 9px;font-size:13.3px;border-radius:10px}
 table{font-size:12.8px}
 .note,.warn{font-size:12px;padding:8px 10px;margin-top:8px}
 .nav button{font-size:10.8px;padding:6px 0}
@@ -228,8 +228,8 @@ table{font-size:12.8px}
 .dg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px;align-items:end}
 .dg.two{grid-template-columns:1fr 1fr}
 .dg label{font-size:11px;font-weight:700;color:var(--mute);display:block;min-width:0}
-.dg label input[type=number]{display:block;width:100%;margin-top:4px;padding:8px 9px;font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)}
-input[type=number]{-moz-appearance:textfield;appearance:textfield}
+.dg label input:is([type=number],[data-num]){display:block;width:100%;margin-top:4px;padding:8px 9px;font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)}
+input:is([type=number],[data-num]){-moz-appearance:textfield;appearance:textfield}
 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .tgl{display:flex!important;flex-direction:column;align-items:flex-start;gap:7px}
 .tg{position:relative;display:inline-block;width:46px;height:26px;margin-top:3px}
@@ -466,7 +466,7 @@ body{min-height:100dvh;overscroll-behavior-y:none}
 @media(min-width:781px){.top{margin:0 0 8px}.nav>div{max-width:520px;margin:0 auto 12px;border-radius:22px;padding-bottom:8px}.nav{bottom:env(safe-area-inset-bottom)}}
 
 /* ---------- No auto-zoom on inputs (iOS zooms when text < 16px) + always mobile-shaped ---------- */
-.f input,.f input[type=text],.dg input,.dg label input[type=number],.act input,td input[type=text],td input[type=number],.dh input[type=text],.datebtn,.afield input,.amtbox input{font-size:16px!important}
+.f input,.f input[type=text],.dg input,.dg label input:is([type=number],[data-num]),.act input,td input[type=text],td input:is([type=number],[data-num]),.dh input[type=text],.datebtn,.afield input,.amtbox input{font-size:16px!important}
 .amtbox input{font-size:28px!important}
 button,[data-tab],[data-step],.cat,.step{touch-action:manipulation}
 
@@ -592,7 +592,7 @@ body,button,input,textarea,select{font-family:var(--font)}
 /* round 2 */
 :root{--violet:#18683F}
 .mt small{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:clip;overflow-wrap:anywhere}
-.dh input[type=text],.dg input,.dg label input[type=number],.f input,.f input[type=text],.act input{min-height:42px}
+.dh input[type=text],.dg input,.dg label input:is([type=number],[data-num]),.f input,.f input[type=text],.act input{min-height:42px}
 @media (orientation:landscape) and (max-height:520px){.nav button{padding:10px 4px}}
 .dg{align-items:start}
 
@@ -641,11 +641,11 @@ html{background:var(--bg)}
 
 /* ---------- App-shell scrolling: the page itself never scrolls, so a keyboard can't push bars around ---------- */
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
-body{position:fixed;inset:0;width:100%;min-height:0}
-#root{position:fixed;left:0;right:0;top:var(--vvt,0px);height:var(--vvh,100dvh);overflow-x:hidden;overflow-y:auto;
+body{position:fixed;inset:0;width:100%;height:100%;min-height:0}
+#root{position:fixed;left:0;right:0;top:var(--vvt,0px);height:var(--vvh,100%);overflow-x:hidden;overflow-y:auto;
   -webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none}
 #root::-webkit-scrollbar{display:none}
-.kb .nav{display:none}
+.kb .nav{opacity:0;transform:translateY(140%);pointer-events:none}
 
 /* ---------- Interest tracker & per-card extras ---------- */
 .ixtot{margin-top:4px;min-height:42px;display:flex;align-items:center;padding:0 10px;border-radius:11px;background:#FCEDEA;color:var(--coral);font-weight:800;font-size:14px}
@@ -663,3 +663,21 @@ body{position:fixed;inset:0;width:100%;min-height:0}
 .thead,.trow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:6px;font-size:12px;padding:6px 2px;border-bottom:1px solid var(--line)}
 .thead{font-weight:700;color:var(--mute);margin-top:8px}.trow span:first-child{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .thead span:not(:first-child),.trow span:not(:first-child),.trow b{text-align:right}.trow b{color:var(--coral)}
+
+/* ---------- In-app number pad (replaces the iOS keyboard + its prev/next/done bar for amount fields) ---------- */
+#kpad{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:8px 10px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(236,240,233,.97);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+  border-top:1px solid rgba(15,42,29,.10);box-shadow:0 -10px 30px -18px rgba(15,42,29,.35);
+  transform:translateY(105%);transition:transform .22s cubic-bezier(.2,.8,.2,1);-webkit-user-select:none;user-select:none;touch-action:manipulation}
+#kpad.on{transform:none}
+#kpad .kh{display:flex;align-items:center;justify-content:space-between;padding:2px 6px 8px;font-size:12px;font-weight:700;color:var(--mute)}
+#kpad .kh b{color:var(--ink);font-size:13px;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#kpad .kd{border:0;background:none;color:#18683F;font:inherit;font-weight:800;font-size:15px;padding:6px 8px;min-height:36px}
+#kpad .kg{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+#kpad .kg button{height:46px;border:0;border-radius:11px;background:#fff;color:var(--ink);font:inherit;font-size:22px;font-weight:600;box-shadow:0 1px 0 rgba(15,42,29,.14);display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+#kpad .kg button:active{background:#DDE8D6;transform:scale(.97)}
+#kpad .kg .kx{background:#D9E3D3}
+#kpad .kg svg{width:24px;height:24px}
+@media (orientation:landscape) and (max-height:520px){#kpad .kg button{height:34px;font-size:18px}}
+.kp #root{height:calc(100% - var(--kph,0px));top:0}
+.kp .nav{opacity:0;transform:translateY(140%);pointer-events:none}
