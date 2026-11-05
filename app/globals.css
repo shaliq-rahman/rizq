@@ -646,3 +646,20 @@ body{position:fixed;inset:0;width:100%;min-height:0}
   -webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none}
 #root::-webkit-scrollbar{display:none}
 .kb .nav{display:none}
+
+/* ---------- Interest tracker & per-card extras ---------- */
+.ixtot{margin-top:4px;min-height:42px;display:flex;align-items:center;padding:0 10px;border-radius:11px;background:#FCEDEA;color:var(--coral);font-weight:800;font-size:14px}
+.ixadd{display:flex;gap:8px;margin-top:8px;align-items:center}
+.ixadd input{flex:1;min-width:0;min-height:42px;padding:8px 10px;font:inherit;font-size:16px;font-weight:600;border:1.5px solid var(--line);border-radius:11px;background:#fff}
+.ixadd .btn.sm{width:auto;margin:0;padding:0 16px;min-height:42px;font-size:13px}
+.ixlist{margin-top:6px;border-top:1px dashed var(--line);padding-top:4px}
+.ixr{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);padding:3px 0}
+.ixr span{flex:1}.ixr b{color:var(--coral)}
+.ixr .x{width:28px;height:28px;min-width:28px;font-size:16px}
+.trk{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 8px}
+.trk>div{background:var(--bg);border-radius:14px;padding:10px 12px}
+.trk small{display:block;font-size:11px;font-weight:700;color:var(--mute)}
+.trk b{font-size:19px;font-weight:800}.trk b.neg{color:var(--coral)}
+.thead,.trow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:6px;font-size:12px;padding:6px 2px;border-bottom:1px solid var(--line)}
+.thead{font-weight:700;color:var(--mute);margin-top:8px}.trow span:first-child{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thead span:not(:first-child),.trow span:not(:first-child),.trow b{text-align:right}.trow b{color:var(--coral)}
