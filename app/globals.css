@@ -759,3 +759,12 @@ details.hist .ledg{padding:2px 12px 6px}
 .cco+.cco{border-top:1px solid var(--line)}
 .cco.on{background:color-mix(in srgb,var(--c) 9%,#fff)}
 .cco>.ic{width:16px;height:16px;color:var(--violet);vertical-align:0}
+
+.dh .x.armed,.cctop .x.armed{width:auto;min-width:64px;padding:0 10px;font-size:12px;font-weight:800;background:var(--coral);color:#fff;border-radius:10px}
+.cctop .x.armed{border-radius:999px}
+
+/* bank logo plate on the card face */
+.ccbank{display:flex;align-items:center;gap:8px;height:40px;box-sizing:border-box;padding:6px 12px;border-radius:11px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18);max-width:66%}
+.ccbank img{display:block;height:27px;width:auto;max-width:132px;object-fit:contain}
+.ccbank img+img{padding-left:8px;border-left:1px solid #e3e6e1}
+.ccard .ccn input{letter-spacing:.04em}
