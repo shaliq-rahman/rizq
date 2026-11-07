@@ -46,9 +46,10 @@ Firebase Auth needs an email-shaped id, so `shalique` is stored as `shalique@use
 That means **there is no password-reset email** — keep your password safe. Usernames: 3–20 letters, numbers, `.` or `_`; password 6+ characters.
 
 ## One-time data upload (your personal starting data)
-`lib/seed.json` holds your current plan. It is only used by `npm run dev` (never in the production build).
-1. `npm run dev` → open http://localhost:3000 → **Sign up** → your data uploads to Firestore automatically (or Debts → **Upload data now**).
-2. After it's uploaded, blank the file before pushing to GitHub: `echo '{}' > lib/seed.json`. Other devices just log in and pull the data.
+`lib/seed.json` is committed as an empty `{}` (the repo is public). Your real numbers go in `lib/seed.local.json`, which is git-ignored.
+1. Put your plan in `lib/seed.local.json`, then locally run `cp lib/seed.local.json lib/seed.json`.
+2. `npm run dev` → open http://localhost:3000 → **Sign up** → your data uploads to Firestore automatically (or Debts → **Upload data now**).
+3. Restore the blank file before committing: `echo '{}' > lib/seed.json`. Other devices just log in and pull the data.
 
 ## Notes
 - Optional: once your own account exists, you can stop others signing up (Firebase console → Authentication → Settings → User actions → disable "Enable create (sign-up)" if available), or keep the GitHub repo private.
