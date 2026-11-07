@@ -771,3 +771,30 @@ details.hist>summary .ic{width:20px;height:20px;flex:none;vertical-align:0}
 .cardsec details.hist,details.hist{background:#EAF5EC;border-color:#D5E8D9;border-radius:18px}
 details.hist>summary{font-size:14px;color:var(--violet)}
 details.hist[open]>summary{border-bottom-color:#D5E8D9}
+
+/* ---------- In-app text keyboard (same look and behaviour as the number pad) ---------- */
+#tkb{position:fixed;left:0;right:0;bottom:0;z-index:91;padding:8px 6px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(236,240,233,.97);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+  border-top:1px solid rgba(15,42,29,.10);box-shadow:0 -10px 30px -18px rgba(15,42,29,.35);
+  transform:translateY(105%);transition:transform .22s cubic-bezier(.2,.8,.2,1);-webkit-user-select:none;user-select:none;touch-action:manipulation}
+#tkb.on{transform:none}
+#tkb .kh{display:flex;align-items:center;justify-content:space-between;padding:2px 8px 8px;font-size:12px;font-weight:700;color:var(--mute)}
+#tkb .kh b{color:var(--ink);font-size:13px;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#tkb .kd{border:0;background:none;color:#18683F;font:inherit;font-weight:800;font-size:15px;padding:6px 8px;min-height:36px}
+#tkb .tkg{display:flex;flex-direction:column;gap:8px}
+#tkb .tkr{display:flex;gap:5px;justify-content:center}
+#tkb .tkr.r2{padding:0 4.5%}
+#tkb .tkr button{flex:1 1 0;min-width:0;height:44px;border:0;border-radius:9px;background:#fff;color:var(--ink);font:inherit;font-size:20px;font-weight:500;padding:0;
+  box-shadow:0 1px 0 rgba(15,42,29,.16);display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+#tkb .tkr button:active{background:#DDE8D6;transform:scale(.97)}
+#tkb .tkr button.x{background:#D2DDCC}
+#tkb .tkr button.w{flex:1.45 1 0}
+#tkb .tkr button.w2{flex:1.7 1 0;font-size:15px;font-weight:700}
+#tkb .tkr button.sp{flex:5 1 0;font-size:15px;font-weight:600;color:var(--mute)}
+#tkb .tkr button.w3{flex:2.2 1 0;font-size:15px;font-weight:800}
+#tkb .tkr button.go{background:var(--violet);color:#fff}
+#tkb .tkr button.go:active{background:#12512F}
+#tkb .tkr button.on{background:#fff;color:var(--violet)}
+#tkb .tkr button.lk{background:var(--violet);color:#fff}
+#tkb svg{width:22px;height:22px}
+@media (orientation:landscape) and (max-height:520px){#tkb .tkr button{height:34px;font-size:17px}#tkb .tkg{gap:5px}}
