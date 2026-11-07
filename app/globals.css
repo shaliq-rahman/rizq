@@ -711,31 +711,6 @@ details.hist .ledg{padding:2px 12px 6px}
 .l1 .x{width:26px;height:26px;min-width:26px;font-size:16px}
 .l2{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;color:var(--mute);font-weight:600;margin-top:2px}
 
-/* credit-card look */
-.drow.cardrow{padding:0;overflow:hidden;background:#fff}
-.cardrow>.dg,.cardrow>.ixadd,.cardrow>.trk,.cardrow>details{margin-left:12px;margin-right:12px}
-.cardrow>:last-child{margin-bottom:12px}
-.ccard{position:relative;margin:10px;min-height:186px;padding:14px 16px;border-radius:20px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:10px;overflow:hidden;
- background:linear-gradient(135deg,var(--c1),color-mix(in srgb,var(--c1) 48%,#08170f));box-shadow:0 12px 24px -12px color-mix(in srgb,var(--c1) 70%,#000)}
-.ccard::before,.ccard::after{content:'';position:absolute;border-radius:50%;pointer-events:none}
-.ccard::before{right:-46px;top:-56px;width:170px;height:170px;background:rgba(255,255,255,.11)}
-.ccard::after{right:34px;bottom:-84px;width:160px;height:160px;background:rgba(255,255,255,.07)}
-.ccard>*{position:relative;z-index:1}
-.cctop{display:flex;align-items:center;gap:10px}
-.cchipic{width:40px;height:30px;border-radius:7px;background:linear-gradient(135deg,#F6E3A1,#D5A53A);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);position:relative;flex:none}
-.cchipic::after{content:'';position:absolute;inset:6px 9px;border:1.5px solid rgba(0,0,0,.22);border-radius:3px;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)) center/100% 1.5px no-repeat}
-.ccnet{flex:1;font-size:10.5px;letter-spacing:.2em;font-weight:800;opacity:.85}
-.cctop .x{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;border:0;font-size:18px;line-height:1;padding:0;flex:none}
-.ccard label{display:block;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.85)}
-.ccard input{width:100%;box-sizing:border-box;background:transparent!important;border:0!important;border-bottom:1.5px solid rgba(255,255,255,.38)!important;border-radius:0!important;color:#fff!important;font-family:inherit;outline:none;padding:3px 0!important;min-height:0!important;box-shadow:none!important}
-.ccard input:focus{border-bottom-color:#fff!important}
-.ccard input::placeholder{color:rgba(255,255,255,.55)}
-.ccard .ccbal input{font-size:30px!important;font-weight:800!important;letter-spacing:-.5px;margin-top:2px}
-.ccard .ccbal .mhint{display:block;margin-top:3px;color:rgba(255,255,255,.82)!important;font-size:11.5px;text-transform:none;letter-spacing:0}
-.ccbot{display:flex;gap:16px;align-items:flex-end}
-.ccn{flex:1.7;min-width:0}.ccr{flex:1;min-width:0}
-.ccard .ccn input{font-size:16px!important;font-weight:700!important;letter-spacing:.07em;text-transform:uppercase}
-.ccard .ccr input{font-size:16px!important;font-weight:700!important}
 /* category dropdown */
 .catdd{margin-top:6px}
 .ccbtn{width:100%;display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:#FBFDF9;border-radius:14px;padding:8px 12px;font:inherit;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;text-align:left}
@@ -759,8 +734,40 @@ details.hist .ledg{padding:2px 12px 6px}
 .dh .x.armed,.cctop .x.armed{width:auto;min-width:64px;padding:0 10px;font-size:12px;font-weight:800;background:var(--coral);color:#fff;border-radius:10px}
 .cctop .x.armed{border-radius:999px}
 
-/* bank logo plate on the card face */
-.ccbank{display:flex;align-items:center;gap:8px;height:40px;box-sizing:border-box;padding:6px 12px;border-radius:11px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18);max-width:66%}
-.ccbank img{display:block;height:27px;width:auto;max-width:132px;object-fit:contain}
-.ccbank img+img{padding-left:8px;border-left:1px solid #e3e6e1}
-.ccard .ccn input{letter-spacing:.04em}
+/* credit cards section: chip selector + detail */
+.cardsec .muted{font-size:15px;line-height:1.5}
+.cardsec>h3{font-size:20px}
+.cchips{display:flex;gap:12px;overflow-x:auto;padding:16px 12px 18px;margin:0 -12px -4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cchips::-webkit-scrollbar{display:none}
+.cchip2{position:relative;flex:0 0 auto;min-width:104px;max-width:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 10px 10px;border-radius:22px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;cursor:pointer}
+.cchip2{transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+.cchip2:not(.on):active{transform:scale(.97)}
+.cchip2.on{border-color:#17653F;color:#fff;background:linear-gradient(145deg,#1B7447,#33A86C);transform:translateY(-2px);
+ box-shadow:0 12px 22px -8px rgba(30,122,76,.8),0 0 0 4px rgba(51,168,108,.22)}
+.cchip2.on .ccname{color:#fff;font-weight:800}
+.cchip2.on .cclogo{background:#fff;border-radius:12px;padding:4px 9px;height:34px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.cchip2 .cclogo{height:30px;display:flex;align-items:center;justify-content:center;color:var(--mute)}
+.cchip2 .cclogo img{display:block;height:26px;width:auto;max-width:92px;object-fit:contain}
+.cchip2 .cclogo .ic{width:26px;height:26px;vertical-align:0}
+.cchip2 .ccname{font-size:12.5px;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cchip2 .ckb{position:absolute;top:-9px;right:-6px;width:26px;height:26px;border-radius:50%;background:#C9F06B;color:#0F3D24;display:grid;place-items:center;box-shadow:0 0 0 3px #fff,0 4px 10px rgba(0,0,0,.2)}
+.cchip2 .ckb .ic{width:15px;height:15px;vertical-align:0;stroke-width:3}
+.cdetail{margin-top:6px}
+.cardsec .dh input[type=text]{font-size:17px;font-weight:800;min-height:50px;border-radius:16px;padding:0 14px}
+.cardsec .dh .x{width:50px;height:50px;border-radius:16px}
+.cardsec .dg label{font-size:15px;font-weight:700;color:var(--ink)}
+.cardsec .dg label input:is([type=number],[data-num]){min-height:52px;border-radius:16px;font-size:18px;font-weight:600;padding:0 14px;margin-top:6px}
+.cardsec .ixtot{min-height:52px;border-radius:16px;font-size:18px;padding:0 14px;margin-top:6px;background:#FDE7E4;border:1.5px solid #F7CFCB}
+.cardsec .mhint{font-size:13.5px;color:var(--mute)}
+.cardsec .ixadd input{min-height:52px;border-radius:16px;font-size:17px;padding:0 14px}
+.cardsec .ixadd .btn.sm{min-height:52px;border-radius:16px;font-size:16px;padding:0 22px;box-shadow:0 8px 16px -8px rgba(30,122,76,.6)}
+.cardsec .trk.three{gap:10px;margin:14px 0 10px}
+.cardsec .trk.three>div{background:#EEF6EF;border-radius:18px;padding:12px 12px}
+.cardsec .trk.three small{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap}
+.cardsec .trk.three b{font-size:19px;margin-top:2px;display:block}
+.cardsec .trk.three b.neg{color:var(--coral)}
+details.hist>summary{display:flex;align-items:center;gap:10px;padding:13px 14px}
+details.hist>summary .ic{width:20px;height:20px;flex:none;vertical-align:0}
+.cardsec details.hist,details.hist{background:#EAF5EC;border-color:#D5E8D9;border-radius:18px}
+details.hist>summary{font-size:14px;color:var(--violet)}
+details.hist[open]>summary{border-bottom-color:#D5E8D9}
