@@ -692,3 +692,25 @@ body{position:fixed;inset:0;width:100%;height:100%;min-height:0}
 .wrow .wa{font-size:15px;font-weight:800;white-space:nowrap}
 .wrow .btn.sm{width:auto;margin:0;padding:0 16px;min-height:38px;font-size:13px}
 .wcard{border:1.5px solid var(--violet2)}
+
+/* debts sections + ledgers */
+.dsec{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;margin:0 -2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.dsec::-webkit-scrollbar{display:none}
+.dsec button{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.dsec button.on{background:var(--violet);border-color:var(--violet);color:#fff}
+.trk.three{grid-template-columns:repeat(3,1fr);margin:10px 0 6px}
+.trk.three b{font-size:15px}
+details.hist{margin-top:6px;border:1px solid var(--line);border-radius:14px;background:#FBFDF9}
+details.hist>summary{cursor:pointer;list-style:none;padding:10px 12px;font-size:12.5px;font-weight:700;color:var(--violet)}
+details.hist>summary::-webkit-details-marker{display:none}
+details.hist[open]>summary{border-bottom:1px solid var(--line)}
+.ledg{padding:2px 12px 6px}
+details.hist .ledg{padding:2px 12px 6px}
+.lrow{padding:8px 0;border-bottom:1px solid var(--line)}
+.lrow:last-child{border-bottom:0}
+.l1{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600}
+.l1>span{flex:1;min-width:0;overflow-wrap:anywhere}
+.l1 b{font-weight:800;white-space:nowrap}
+.l1 b.neg{color:var(--coral)}.l1 b.pos{color:var(--violet)}.l1 b.pos2{color:var(--violet)}
+.l1 .x{width:26px;height:26px;min-width:26px;font-size:16px}
+.l2{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;color:var(--mute);font-weight:600;margin-top:2px}
