@@ -735,7 +735,7 @@ details.hist .ledg{padding:2px 12px 6px}
 .cctop .x.armed{border-radius:999px}
 
 /* credit cards section: chip selector + detail */
-.cchips{display:flex;gap:12px;overflow-x:auto;padding:16px 12px 18px;margin:0 -12px -4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cchips{position:relative;display:flex;gap:12px;overflow-x:auto;padding:16px 12px 18px;margin:0 -12px -4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .cchips::-webkit-scrollbar{display:none}
 .cchip2{position:relative;flex:0 0 auto;min-width:104px;max-width:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 10px 10px;border-radius:22px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;cursor:pointer}
 .cchip2{transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
